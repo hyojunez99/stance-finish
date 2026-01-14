@@ -17,8 +17,10 @@ const CategorySection = () => {
         {
           y: 0,
           opacity: 1,
+          // 애니메이션 지속 시간
           duration: 0.8,
           ease: "power2.out",
+          // 스크롤 이벤트와 연동
           scrollTrigger: {
             trigger: item,
             // 요소가 뷰포트 85%에 들어오면

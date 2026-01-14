@@ -9,8 +9,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProductSection = () => {
+// BEST 카테고리 상품
   const bestItems = listDate.filter((item) => item.category === "best");
+  // 전체 상품
   const totalItems = bestItems.length;
+  // 한 화면에 보이는 슬라이드
   const visibleCount = 4;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liked, setLiked] = useState({});
@@ -22,13 +25,16 @@ const ProductSection = () => {
     }));
   };
 
+   // 슬라이드 이동 함수
   const nextSlide = () => setCurrentIndex((prev) => (prev + 2) % totalItems);
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 2 + totalItems) % totalItems);
 
+  // 할인율 계산
   const calculateDiscount = (price1, price2) =>
     Math.floor(((price1 - price2) / price1) * 100);
 
+    // 무한 슬라이드 구현용 배열
   const slides = [...bestItems, ...bestItems.slice(0, visibleCount)];
 
   const [isTransition, setIsTransition] = useState(true);

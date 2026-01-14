@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# [프로젝트 이름]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> ["Run Your Pace" 나만의 페이스로 달리는 러너를 위한 니치 쇼핑몰]
 
-## Available Scripts
+## 1. 프로젝트 소개
 
-In the project directory, you can run:
+- **설명:** 기획부터 디자인, 개발까지 직접 참여하였으며, **Mock Data(JSON)**를 활용해 실제 커머스 로직을 구현한 SPA 쇼핑몰 프로젝트입니다.
+- **진행 기간:** 2025.12.19 ~ 2025.12.29 (9일)
+- **개발 인원:** FrontEnd 5인 (Team Project)
+- **배포 링크:** [https://hyojunez99.github.io/stance-finish/]
 
-### `npm start`
+## 2. 사용 기술 스택 (Tech Stack)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Language:** JavaScript (ES6+)
+- **Framework:** React.js
+- **Styling:** SCSS
+- **Data Handling:** Custom Mock Data (JSON)
+- **Design & Tool:** **Figma**, Git, GitHub, GSAP
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3. 기획 및 디자인 (Planning & Design)
 
-### `npm test`
+- **Tool:** Figma
+- **Concept:** 사용자 직관성을 고려한 UI/UX 설계 및 와이어프레임 제작
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. 디렉토리 구조
 
-### `npm run build`
+src
+│
+├── assets # 이미지, 폰트 및 JSON 데이터
+│ │
+│ ├── data # 화면에 쓰이는 고정 데이터 관리
+│ │
+│ ├── images # 이미지 파일 보관
+│ │
+│ └── scss # 공통으로 쓰이는 폰토, 색상, 반응형 관리 폴더
+│
+├── components # 각 페이지와 공통 영역을 구성하는 컴포넌트를 관리 폴더
+│ │
+│ ├── common # 여러 페이지에서 공통으로 재사용되는 컴포넌트
+│ │
+│ ├── detail # 상품 상세 페이지 전용 컴포넌트 폴더
+│ │
+│ └── main # 메인 페이지(홈) 전용 컴포넌트 폴더
+│
+├── layout # 공통 레이아웃 구조 (Header, Footer )
+│  
+└── pages # 라우팅 페이지 (Cart, Detail, Main...)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5. 담당 역할
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[데이터/이미지 및 메인 페이지 제작, 장바구니 와이어프레임 제작]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Figma를 활용한 장바구니페이지 와이어프레임 제작
+- 상품 및 뉴스 데이터 JSON으로 관리, 이미지 파일 정리
+- GSAP 및 ScrollTrigger 활용한 스크롤 애니메이션 적용
+- React와 SCSS 구현
 
-### `npm run eject`
+[개발: 기능]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 6. 주요 기능
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- CategorySection - 메인 페이지 러닝 뉴스 섹션
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* RunnigNews.json 데이터 기반 뉴스 카드 렌더링
+* GSAP ScrollTrigger 적용, 스크롤 시 애니메이션
 
-## Learn More
+- ProductSection - 메인 페이지 베스트셀러 상품 섹션
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Item.json 데이터 기반 “best” 카테고리 상품 렌더링
+* 슬라이드 기능: 이전/다음 버튼
+* GSAP ScrollTrigger 적용, 스크롤 시 애니메이션
+* 할인율 계산 및 가격 표시
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ProductSection2 - 메인 페이지 MD 추천(PACEY PICK) 상품 섹션
 
-### Code Splitting
+* Item.json 데이터 기반 “pick” 카테고리 상품 렌더링
+* 상품 클릭 시 상세 페이지 이동 (id 포함 URL)
+* GSAP ScrollTrigger 적용, 스크롤 시 애니메이션
+* 할인율 계산 및 가격 표시
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- MidBlog - 이벤트/프로모션 배너 섹션
 
-### Analyzing the Bundle Size
+* 이벤트 이미지와 텍스트 렌더링
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- BottomBlog - 메인 페이지 하단 트렌드 키워드 섹션
 
-### Making a Progressive Web App
+* Keyword.json 데이터 기반 키워드 이미지 및 제목 렌더링
+* 무한 스크롤 형태로 키워드 반복 노출
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 데이터/이미지 관리
 
-### Advanced Configuration
+* JSON 데이터 사이트 콘텐츠 관리
+* Item.json, Keyword.json, RunnigNews.json 등
+* 상품, 키워드, 뉴스 카드 데이터 관리
+* 컴포넌트 렌더링에 활용
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 7. 트러블 슈팅
 
-### Deployment
+문제 1. 스크롤 애니메이션 미작동
+상황: GSAP ScrollTrigger가 작동 후 페이지에서 사라짐
+해결: useRef와 useEffect를 활용하여 컴포넌트 렌더 후 애니메이션 적용
+과정: GSAP 공식 홈페이지 문서와 기존 적용 페이지를 참고하여 useRef와 useEffect를 활용
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 8. 실행 화면
 
-### `npm run build` fails to minify
+(구현한 화면 스크린샷 1장 첨부)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+
+```

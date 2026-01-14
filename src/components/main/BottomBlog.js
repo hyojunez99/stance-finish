@@ -8,6 +8,7 @@ const BottomBlog = () => {
       <h2>#HOT PEACY KEYWORD</h2>
       <div className="scroll-wrapper">
         <ul className="scroll-list">
+          {/* 배열을 3번 반복해서 늘리기 */}
           {[...listDate, ...listDate, ...listDate].map((item, idx) => (
             <li key={idx}>
               <img
@@ -24,4 +25,3 @@ const BottomBlog = () => {
 };
 
 export default BottomBlog;
-
