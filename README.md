@@ -9,7 +9,6 @@
 - **개발 인원:** 5인 팀 프로젝트  
 - **배포 링크:** [Stance-Finish](https://hyojunez99.github.io/stance-finish/)  
 - **GitHub:** [Repository Link](https://github.com/hyojunez99/stance-finish.git)  
-- **PDF:** [pacey.pdf](pacey.pdf)
 
 ---
 
